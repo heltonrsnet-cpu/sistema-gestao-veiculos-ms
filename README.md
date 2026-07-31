@@ -35,7 +35,7 @@ A comunicação assíncrona entre os serviços é realizada utilizando o **Rabbi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/heltonrsnet-cpu/sistema-gestao-veiculos-ms.git
+   git clone [https://github.com/heltonrsnet-cpu/sistema-gestao-veiculos-ms.git](https://github.com/heltonrsnet-cpu/sistema-gestao-veiculos-ms.git)
    ```
 2. Acesse a pasta do projeto:
    ```bash
@@ -47,6 +47,8 @@ A comunicação assíncrona entre os serviços é realizada utilizando o **Rabbi
    ```
 
 O comando acima irá baixar as dependências, criar os containers do banco de dados, da fila de mensagens e rodar os dois microsserviços automaticamente.
+
+⚠️ Aviso de Inicialização: Como a arquitetura adota o padrão de resiliência "Crash-only" delegando o controle de falhas ao Docker, aguarde cerca de 30 a 40 segundos após rodar o comando acima antes de realizar a primeira requisição. Esse é o tempo necessário para o PostgreSQL e o RabbitMQ inicializarem completamente e as APIs restabelecerem a conexão de forma automática.
 
 ## 📡 Endpoints da API
 
