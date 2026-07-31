@@ -35,7 +35,7 @@ A comunicação assíncrona entre os serviços é realizada utilizando o **Rabbi
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/heltonrsnet-cpu/prova-fase-5.git
+   git clone https://github.com/heltonrsnet-cpu/sistema-gestao-veiculos-ms.git
    ```
 2. Acesse a pasta do projeto:
    ```bash
