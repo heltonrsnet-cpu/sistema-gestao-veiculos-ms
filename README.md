@@ -39,7 +39,7 @@ A comunicação assíncrona entre os serviços é realizada utilizando o **Rabbi
    ```
 2. Acesse a pasta do projeto:
    ```bash
-   cd prova-fase-5
+   cd sistema-gestao-veiculos-ms
    ```
 3. Suba toda a infraestrutura utilizando o Docker Compose:
    ```bash
