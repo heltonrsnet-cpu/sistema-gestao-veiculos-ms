@@ -1,0 +1,25 @@
+{
+  "info": {
+    "name": "Fase 5 - Microsserviços",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Cadastrar Veículo",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"marca\": \"Toyota\",\n  \"modelo\": \"Corolla\",\n  \"ano\": 2024,\n  \"placa\": \"ABC-1234\"\n}" },
+        "url": { "raw": "http://localhost:3000/veiculos", "protocol": "http", "host": ["localhost"], "port": "3000", "path": ["veiculos"] }
+      }
+    },
+    {
+      "name": "Listar e Filtrar",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "http://localhost:3001/veiculos?marca=Toyota", "protocol": "http", "host": ["localhost"], "port": "3001", "path": ["veiculos"], "query": [{ "key": "marca", "value": "Toyota" }] }
+      }
+    }
+  ]
+}

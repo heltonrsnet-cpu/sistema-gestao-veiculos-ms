@@ -1,0 +1,25 @@
+
+services:
+  # Configuração do Message Broker (RabbitMQ)
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq-broker
+    ports:
+      - "5672:5672"   # Porta padrão de comunicação
+      - "15672:15672" # Porta da interface visual do RabbitMQ
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    restart: always
+
+  # Configuração do Banco de Dados (PostgreSQL)
+  postgres:
+    image: postgres:15-alpine
+    container_name: postgres-db
+    ports:
+      - "5432:5432" # Porta padrão do banco
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: adminpassword
+      POSTGRES_DB: veiculos_db
+    restart: always
