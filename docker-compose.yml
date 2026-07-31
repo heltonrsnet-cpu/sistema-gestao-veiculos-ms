@@ -1,4 +1,3 @@
-
 services:
   # Configuração do Message Broker (RabbitMQ)
   rabbitmq:
@@ -22,4 +21,26 @@ services:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: adminpassword
       POSTGRES_DB: veiculos_db
+    restart: always
+
+  # Microsserviço de Cadastro
+  cadastro-api:
+    build: ./cadastro-veiculos
+    container_name: cadastro-api
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
+      - postgres
+    restart: always
+
+  # Microsserviço de Listagem
+  listagem-api:
+    build: ./listagem-veiculos
+    container_name: listagem-api
+    ports:
+      - "3001:3001"
+    depends_on:
+      - rabbitmq
+      - postgres
     restart: always
